@@ -13,7 +13,7 @@ pipeline {
 
         stage('Executar Testes Web (Cypress)') {
     steps {
-        bat 'set NO_COLOR=1 && npm run cy:run'
+        bat 'npx cypress run'
     }
 }
 
