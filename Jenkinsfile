@@ -7,13 +7,13 @@ pipeline {
     stages {
         stage('Instalar dependencias') {
             steps {
-                sh 'npm ci || npm install'
+                bat 'npm ci || npm install'
             }
         }
 
         stage('Executar Testes Web (Cypress)') {
             steps {
-                sh 'NO_COLOR=1 npm run cy:run'
+                bat 'NO_COLOR=1 npm run cy:run'
             }
         }
     }
