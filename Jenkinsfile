@@ -36,13 +36,13 @@ pipeline {
     stages {
         stage('Instalar dependencias') {
             steps {
-                sh 'npm ci || npm install'
+                bat 'npm ci || npm install'
             }
         }
 
         stage('Executar Testes API') {
             steps {
-                sh 'npm test'
+                bat 'npm test'
             }
         }
     }
