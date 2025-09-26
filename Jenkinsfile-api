@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Instalar dependencias') {
+            steps {
+                bat 'npm ci || npm install'
+            }
+        }
+
+        stage('Executar Testes API') {
+            steps {
+                bat 'npm test'
+            }
+        }
+    }
+}
